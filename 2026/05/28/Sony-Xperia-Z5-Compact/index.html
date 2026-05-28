@@ -113,6 +113,24 @@
                             z-series
                         </a>
                     </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/E5803/">
+                            E5803
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/E5823/">
+                            E5823
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/SO-02H/">
+                            SO-02H
+                        </a>
+                    </span>    
                            
             
         </div>
@@ -135,86 +153,148 @@
 </div>
     <div class="post-content">
     
-  <div style="
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-    margin: 25px 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    overflow: hidden;
-  ">
+  <div class="spec-card-wrapper">
     <style>
-      .spec-container { display: flex; flex-direction: row; }
-      .spec-left { width: 30%; background: #fafafa; border-right: 1px solid #eee; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; }
-      .spec-right { width: 70%; padding: 20px; }
-      .spec-grid { display: grid; grid-template-columns: 1fr 2fr; }
-      @media (max-width: 768px) {
-        .spec-container { flex-direction: column; }
-        .spec-left { width: 100%; border-right: none; border-bottom: 1px solid #eee; }
-        .spec-right { width: 100%; }
+      .spec-card-wrapper {
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        background: #ffffff;
+        margin: 24px 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .spec-card-wrapper * { box-sizing: border-box; }
+      .spec-main-body { display: table; width: 100%; table-layout: fixed; }
+      
+      /* 电脑端左右布局 */
+      .spec-panel-left { display: table-cell; width: 28%; background: #fafafa; border-right: 1px solid #eee; vertical-align: top; padding: 24px 16px; text-align: center; }
+      .spec-panel-right { display: table-cell; width: 72%; padding: 20px 24px; vertical-align: top; }
+      
+      .spec-img-box { width: 100%; margin-bottom: 16px; text-align: center; }
+      .spec-img-box img { max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 4px; display: inline-block; }
+      .spec-main-title { margin: 0 0 12px 0; font-size: 16px; color: #111; font-weight: 600; line-height: 1.4; }
+      
+      .spec-tags-container { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+      .spec-tag { background: #f3f3f3; color: #555; padding: 2px 6px; font-size: 11px; border-radius: 4px; border: 1px solid #e8e8e8; white-space: nowrap; }
+      
+      .spec-group-title { font-weight: bold; font-size: 13px; color: #222; border-bottom: 2px solid #333; padding: 14px 0 6px 0; margin-top: 8px; }
+      
+      /* 表格行样式：电脑端单行两列 */
+      .spec-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px dashed #efefef; gap: 12px; }
+      .spec-key { color: #666; font-size: 12px; min-width: 80px; flex-shrink: 0; text-align: left; }
+      .spec-val { color: #222; font-size: 12px; text-align: right; word-break: break-word; overflow-wrap: break-word; }
+
+      /* 📱 核心：移动端/手机端极端适配方案 */
+      @media (max-width: 767px) {
+        .spec-main-body { display: block; }
+        .spec-panel-left { display: block; width: 100%; border-right: none; border-bottom: 1px solid #eee; padding: 20px 16px; }
+        .spec-panel-right { display: block; width: 100%; padding: 16px 16px; }
+        
+        .spec-img-box img { max-height: 140px; }
+        .spec-main-title { font-size: 15px; margin-bottom: 8px; }
+        
+        /* 手机端由于屏幕窄，将左右并排改为上下并排，彻底解决数据被截断显示不全的问题 */
+        .spec-row { flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 4px; padding: 8px 0; }
+        .spec-key { min-width: 100%; color: #888; font-size: 11px; text-align: left; }
+        .spec-val { text-align: left; font-size: 12px; color: #111; padding-left: 2px; }
       }
     </style>
-    <div class="spec-container">
-      <div class="spec-left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Sony_Xperia_Z5_Compact.jpg" alt="Xperia Z5 Compact" style="max-height: 180px; object-fit: contain; margin-bottom: 15px; border-radius: 4px;">
-        <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; font-weight: bold; margin-bottom: 4px;">SONY</div>
-        <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #111; font-weight: 600;">Xperia Z5 Compact</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
-          <span style="background: #f0f0f0; color: #555; padding: 2px 8px; font-size: 11px; border-radius: 4px; border: 1px solid #e0e0e0;">23MP相机</span><span style="background: #f0f0f0; color: #555; padding: 2px 8px; font-size: 11px; border-radius: 4px; border: 1px solid #e0e0e0;">4.6英寸</span><span style="background: #f0f0f0; color: #555; padding: 2px 8px; font-size: 11px; border-radius: 4px; border: 1px solid #e0e0e0;">经典防水</span><span style="background: #f0f0f0; color: #555; padding: 2px 8px; font-size: 11px; border-radius: 4px; border: 1px solid #e0e0e0;">E5823</span>
+    <div class="spec-main-body">
+      <div class="spec-panel-left">
+        <div class="spec-img-box"><img src="/images/z5c.jpg" alt="Xperia Z5 Compact"></div>
+        <h3 class="spec-main-title">Xperia Z5 Compact</h3>
+        <div class="spec-tags-container">
+          <span class="spec-tag">E5803</span><span class="spec-tag">E5823</span><span class="spec-tag">SO-02H</span><span class="spec-tag">Suzuran</span>
         </div>
       </div>
-      <div class="spec-right">
-        <div class="spec-grid">
-          <div style="grid-column: span 2; font-weight: bold; font-size: 13px; color: #111; border-bottom: 1px solid #eee; padding: 15px 0 5px 0; margin-top: 5px;">核心配置</div>
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">手机型号</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">Sony Xperia Z5 Compact (E5823)</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">发布时间</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">2015年 10月</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">操作系统</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">Android 5.1.1 (可升级至 Android 7.1.1)</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">处理器</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">Qualcomm Snapdragon 810 (八核)</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">运存与存储</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">2GB RAM / 32GB ROM (支持最高200GB拓展)</div>
-      <div style="grid-column: span 2; font-weight: bold; font-size: 13px; color: #111; border-bottom: 1px solid #eee; padding: 15px 0 5px 0; margin-top: 5px;">屏幕与机身</div>
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">屏幕规格</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">4.6 英寸 IPS LCD (720 x 1280 像素)</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">像素密度</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">~323 ppi</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">机身尺寸</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">127 x 65 x 8.9 mm</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">机身重量</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">138 g</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">防水防尘</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">IP68 级别认证</div>
-      <div style="grid-column: span 2; font-weight: bold; font-size: 13px; color: #111; border-bottom: 1px solid #eee; padding: 15px 0 5px 0; margin-top: 5px;">相机与电源</div>
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">后置摄像头</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">2300 万像素 / f/2.0 光圈 / 24mm 广角 / 支持4K录制</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">前置摄像头</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">5100 万像素 / f/2.4</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">电池容量</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">2700 mAh (支持 QC 2.0 18W快充)</div>
-      
-        <div style="color: #666; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5;">特殊功能</div>
-        <div style="color: #222; font-size: 12px; padding: 6px 0; border-bottom: 1px dashed #f5f5f5; text-align: right;">侧边电源键集成指纹识别 / NFC</div>
-      
+      <div class="spec-panel-right">
+        <div class="spec-group-title">核心配置</div>
+        <div class="spec-row">
+          <div class="spec-key">传播名</div>
+          <div class="spec-val">Sony Xperia Z5 Compact</div>
         </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">机型代号</div>
+          <div class="spec-val">E5803 / E5823 / SO-02H (docomo)</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">研发代号</div>
+          <div class="spec-val">Suzuran</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">发布时间</div>
+          <div class="spec-val">2015年 10月</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">操作系统</div>
+          <div class="spec-val">Android 5.1.1 (可升级至 Android 7.1.1)</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">处理器</div>
+          <div class="spec-val">Qualcomm Snapdragon 810 (八核)</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">运存与存储</div>
+          <div class="spec-val">2GB RAM / 32GB ROM (支持最高200GB拓展)</div>
+        </div>
+      <div class="spec-group-title">屏幕与机身</div>
+        <div class="spec-row">
+          <div class="spec-key">屏幕规格</div>
+          <div class="spec-val">4.6 英寸 IPS LCD (720 x 1280 像素)</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">像素密度</div>
+          <div class="spec-val">~323 ppi</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">机身尺寸</div>
+          <div class="spec-val">127 x 65 x 8.9 mm</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">机身重量</div>
+          <div class="spec-val">138 g</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">防水防尘</div>
+          <div class="spec-val">IP68 级别认证</div>
+        </div>
+      <div class="spec-group-title">相机与电源</div>
+        <div class="spec-row">
+          <div class="spec-key">后置摄像头</div>
+          <div class="spec-val">2300 万像素 / f/2.0 光圈 / 24mm 广角 / 支持4K录制</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">前置摄像头</div>
+          <div class="spec-val">5100 万像素 / f/2.4</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">电池容量</div>
+          <div class="spec-val">2700 mAh (支持 QC 2.0 快充)</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">特殊功能</div>
+          <div class="spec-val">侧边电源键集成指纹识别 / NFC</div>
+        </div>
+      
       </div>
     </div>
   </div>
   
-
 </div> 
 
 <script>
