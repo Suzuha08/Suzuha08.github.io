@@ -14,7 +14,7 @@
 
 
 
-<title>Sony Xperia Z5 Compact | XperiaCompactLib</title>
+<title>Xperia Z5 Compact | XperiaCompactLib</title>
 
 
 
@@ -109,12 +109,6 @@
             
                 
                     <span class="post-tag">
-                        <a href="/tags/z-series/">
-                            z-series
-                        </a>
-                    </span>    
-                
-                    <span class="post-tag">
                         <a href="/tags/E5803/">
                             E5803
                         </a>
@@ -131,18 +125,30 @@
                             SO-02H
                         </a>
                     </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/Suzuran/">
+                            Suzuran
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/z-series/">
+                            z-series
+                        </a>
+                    </span>    
                            
             
         </div>
         <div class="post-title">
             
             
-                Sony Xperia Z5 Compact
+                Xperia Z5 Compact
             
             
         </div>
         <span class="post-date">
-            5月 28, 2026
+            5月 29, 2026
         </span>
     </div>
     <div class="post-img">
@@ -153,7 +159,7 @@
 </div>
     <div class="post-content">
     
-  <div class="spec-card-wrapper" id="spec-21501">
+  <div class="spec-card-wrapper" id="spec-36780">
     <style>
       .spec-card-wrapper {
         border: 1px solid #e5e5e5; border-radius: 8px; background: #ffffff; margin: 24px 0;
@@ -163,38 +169,51 @@
       .spec-card-wrapper * { box-sizing: border-box; }
       .spec-main-body { display: table; width: 100%; table-layout: fixed; }
       
-      /* 布局 */
+      /* 左右主分栏 */
       .spec-panel-left { display: table-cell; width: 30%; background: #fafafa; border-right: 1px solid #eee; vertical-align: top; padding: 24px 16px; text-align: center; }
       .spec-panel-right { display: table-cell; width: 70%; padding: 4px 24px 24px 24px; vertical-align: top; }
       
-      /* 图片与标题 */
-      .spec-img-box { width: 100%; min-height: 160px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; }
-      .spec-img-box img { max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 4px; transition: opacity 0.2s ease; }
+      /* 左侧固定封面 */
+      .spec-cover-box { width: 100%; min-height: 160px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; }
+      .spec-cover-box img { max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 4px; }
       .spec-main-title { margin: 0 0 12px 0; font-size: 16px; color: #111; font-weight: 600; }
-      
-      /* 标签 */
       .spec-tags-container { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
       .spec-tag { background: #f3f3f3; color: #555; padding: 2px 6px; font-size: 11px; border-radius: 4px; border: 1px solid #e8e8e8; }
       
-      /* 右侧新增：颜色卡片列表布局 */
-      .spec-color-row-layout { display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 0; }
-      .spec-color-item { 
-        display: flex; align-items: center; gap: 8px; padding: 6px 12px; 
-        border: 1px solid #e0e0e0; border-radius: 6px; cursor: pointer; 
-        transition: all 0.2s ease; background: #fff;
+      /* 🎨 右侧：上下结构的“大图展示展台” */
+      .spec-color-large-card { 
+        background: #fafafa; border: 1px solid #eee; border-radius: 6px; 
+        padding: 16px; margin-top: 10px; margin-bottom: 12px;
+        display: flex; flex-direction: column; gap: 16px; align-items: center;
       }
-      .spec-color-item:hover { border-color: #999; }
-      .spec-color-item.active { border-color: #111; background: #f9f9f9; font-weight: bold; }
-      .spec-color-lens { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
+      /* 大图舞台尺寸大幅提升 */
+      .spec-color-big-stage { 
+        width: 100%; height: 220px; display: flex; align-items: center; 
+        justify-content: center; background: #fff; border: 1px solid #e8e8e8; 
+        border-radius: 4px; padding: 10px; overflow: hidden;
+      }
+      .spec-color-big-stage img { max-width: 100%; max-height: 100%; object-fit: contain; transition: opacity 0.15s ease; }
+      
+      /* 选项网格 */
+      .spec-color-tabs-grid { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
+      .spec-color-btn-item { 
+        display: flex; align-items: center; gap: 8px; padding: 8px 12px; 
+        border: 1px solid #dcdcdc; border-radius: 4px; cursor: pointer; 
+        transition: all 0.15s ease; background: #fff; flex: 1 1 calc(25% - 6px); 
+        justify-content: center;
+      }
+      .spec-color-btn-item:hover { border-color: #999; }
+      .spec-color-btn-item.active { border-color: #111; background: #fff; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+      .spec-color-lens { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
       .spec-color-text { font-size: 12px; color: #333; }
       
-      /* 参数表格 */
+      /* 参数表格行 */
       .spec-group-title { font-weight: bold; font-size: 13px; color: #222; border-bottom: 2px solid #333; padding: 16px 0 6px 0; margin-top: 8px; }
       .spec-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px dashed #efefef; gap: 12px; }
       .spec-key { color: #666; font-size: 12px; min-width: 90px; flex-shrink: 0; text-align: left; }
       .spec-val { color: #222; font-size: 12px; text-align: right; word-break: break-word; }
 
-      /* 📱 手机端适配 */
+      /* 📱 手机端自适应 */
       @media (max-width: 767px) {
         .spec-main-body { display: block; }
         .spec-panel-left { display: block; width: 100%; border-right: none; border-bottom: 1px solid #eee; padding: 20px 16px; }
@@ -202,24 +221,54 @@
         .spec-row { flex-direction: column; gap: 4px; }
         .spec-key { min-width: 100%; color: #888; font-size: 11px; }
         .spec-val { text-align: left; padding-left: 2px; }
-        .spec-color-row-layout { gap: 8px; }
-        .spec-color-item { flex: 1 1 calc(50% - 4px); justify-content: center; } /* 手机上两两平分 */
+        
+        .spec-color-big-stage { height: 180px; } /* 移动端高度略微缩放以适配屏幕 */
+        .spec-color-btn-item { flex: 1 1 calc(50% - 4px); } /* 手机上两两一排 */
       }
     </style>
     
     <div class="spec-main-body">
       <div class="spec-panel-left">
-        <div class="spec-img-box">
-          <img class="spec-target-img" src="/images/z5c.jpg" alt="Xperia Z5 Compact">
+        <div class="spec-cover-box">
+          <img src="/images/z5c_cover.jpg" alt="Xperia Z5 Compact">
         </div>
         <h3 class="spec-main-title">Xperia Z5 Compact</h3>
         <div class="spec-tags-container">
-          <span class="spec-tag">E5803</span><span class="spec-tag">E5823</span><span class="spec-tag">SO-02H</span><span class="spec-tag">Suzuran</span>
+          <span class="spec-tag">E5823</span><span class="spec-tag">Suzuran</span>
         </div>
       </div>
-      
       <div class="spec-panel-right">
-        <div class="spec-group-title">核心配置</div>
+        
+      <div class="spec-group-title">机身颜色</div>
+      <div class="spec-color-large-card">
+        <div class="spec-color-big-stage">
+          <img class="spec-color-target-img" src="/images/z5c_black.jpg" alt="color global view">
+        </div>
+        <div class="spec-color-tabs-grid">
+    
+        <div class="spec-color-btn-item active" onclick="switchRightColor(this, '/images/z5c_black.jpg')">
+          <span class="spec-color-lens" style="background-color: #2c302e;"></span>
+          <span class="spec-color-text">石墨黑</span>
+        </div>
+      
+        <div class="spec-color-btn-item " onclick="switchRightColor(this, '/images/z5c_white.jpg')">
+          <span class="spec-color-lens" style="background-color: #f5f5f5;"></span>
+          <span class="spec-color-text">陶瓷白</span>
+        </div>
+      
+        <div class="spec-color-btn-item " onclick="switchRightColor(this, '/images/z5c_red.jpg')">
+          <span class="spec-color-lens" style="background-color: #da5a4a;"></span>
+          <span class="spec-color-text">珊瑚红</span>
+        </div>
+      
+        <div class="spec-color-btn-item " onclick="switchRightColor(this, '/images/z5c_yellow.jpg')">
+          <span class="spec-color-lens" style="background-color: #e3d25b;"></span>
+          <span class="spec-color-text">柠檬黄</span>
+        </div>
+      
+        </div>
+      </div>
+    <div class="spec-group-title">核心配置</div>
         <div class="spec-row">
           <div class="spec-key">传播名</div>
           <div class="spec-val">Sony Xperia Z5 Compact</div>
@@ -244,25 +293,30 @@
           <div class="spec-key">操作系统</div>
           <div class="spec-val">Android 5.1.1 (可升级至 Android 7.1.1)</div>
         </div>
-      
+      <div class="spec-group-title">芯片与存储</div>
         <div class="spec-row">
-          <div class="spec-key">处理器</div>
-          <div class="spec-val">Qualcomm Snapdragon 810 (八核)</div>
+          <div class="spec-key">中央处理器 (CPU)</div>
+          <div class="spec-val">Qualcomm Snapdragon 810 (4核 Cortex-A57 @ 2.0GHz + 4核 Cortex-A53 @ 1.5GHz)</div>
         </div>
       
         <div class="spec-row">
-          <div class="spec-key">运存与存储</div>
-          <div class="spec-val">2GB RAM / 32GB ROM (支持最高200GB拓展)</div>
+          <div class="spec-key">图形处理器 (GPU)</div>
+          <div class="spec-val">Adreno 430</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">运行内存 (RAM)</div>
+          <div class="spec-val">2GB LPDDR4</div>
+        </div>
+      
+        <div class="spec-row">
+          <div class="spec-key">闪存芯片 (ROM)</div>
+          <div class="spec-val">32GB eMMC 5.0 (支持最高 200GB MicroSD 拓展)</div>
         </div>
       <div class="spec-group-title">屏幕与机身</div>
         <div class="spec-row">
           <div class="spec-key">屏幕规格</div>
           <div class="spec-val">4.6 英寸 IPS LCD (720 x 1280 像素)</div>
-        </div>
-      
-        <div class="spec-row">
-          <div class="spec-key">像素密度</div>
-          <div class="spec-val">~323 ppi</div>
         </div>
       
         <div class="spec-row">
@@ -291,33 +345,31 @@
         </div>
       
         <div class="spec-row">
-          <div class="spec-key">电池容量</div>
-          <div class="spec-val">2700 mAh (支持 QC 2.0 快充)</div>
+          <div class="spec-key">电池与充电</div>
+          <div class="spec-val">2700 mAh | 支持 Quick Charge 2.0 (18W 功率)</div>
         </div>
       
         <div class="spec-row">
           <div class="spec-key">特殊功能</div>
-          <div class="spec-val">侧边电源键集成指纹识别 / NFC</div>
+          <div class="spec-val">侧边电源键指纹识别</div>
         </div>
       
       </div>
     </div>
 
     <script>
-      function switchSpecColor(element, imgPath) {
-        // 1. 切换右侧颜色选项卡片的激活状态
+      function switchRightColor(element, imgPath) {
         const container = element.parentElement;
-        container.querySelectorAll('.spec-color-item').forEach(el => el.classList.remove('active'));
+        container.querySelectorAll('.spec-color-btn-item').forEach(el => el.classList.remove('active'));
         element.classList.add('active');
         
-        // 2. 联动改变左侧固定位置的缩略图
-        const card = element.closest('.spec-card-wrapper');
-        const img = card.querySelector('.spec-target-img');
+        const cardBox = element.closest('.spec-color-large-card');
+        const img = cardBox.querySelector('.spec-color-target-img');
         img.style.opacity = 0;
         setTimeout(() => {
           img.src = imgPath;
           img.style.opacity = 1;
-        }, 150);
+        }, 120);
       }
     </script>
   </div>
