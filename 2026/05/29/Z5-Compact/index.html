@@ -14,7 +14,7 @@
 
 
 
-<title>Xperia Z5 Compact | XperiaCompactLib</title>
+<title>Sony Xperia Z5 Compact | XperiaCompactLib</title>
 
 
 
@@ -131,19 +131,13 @@
                             Suzuran
                         </a>
                     </span>    
-                
-                    <span class="post-tag">
-                        <a href="/tags/z-series/">
-                            z-series
-                        </a>
-                    </span>    
                            
             
         </div>
         <div class="post-title">
             
             
-                Xperia Z5 Compact
+                Sony Xperia Z5 Compact
             
             
         </div>
@@ -159,7 +153,7 @@
 </div>
     <div class="post-content">
     
-  <div class="spec-card-wrapper" id="spec-36780">
+  <div class="spec-card-wrapper" id="spec-89290">
     <style>
       .spec-card-wrapper {
         border: 1px solid #e5e5e5; border-radius: 8px; background: #ffffff; margin: 24px 0;
@@ -180,32 +174,32 @@
       .spec-tags-container { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
       .spec-tag { background: #f3f3f3; color: #555; padding: 2px 6px; font-size: 11px; border-radius: 4px; border: 1px solid #e8e8e8; }
       
-      /* 🎨 右侧：上下结构的“大图展示展台” */
-      .spec-color-large-card { 
-        background: #fafafa; border: 1px solid #eee; border-radius: 6px; 
-        padding: 16px; margin-top: 10px; margin-bottom: 12px;
-        display: flex; flex-direction: column; gap: 16px; align-items: center;
+      /* 🎨 右侧：全新改良的横向并排、左图右钮的竖版图片展台 */
+      .spec-vertical-color-layout { 
+        display: flex; gap: 20px; background: #fafafa; border: 1px solid #eee; 
+        border-radius: 6px; padding: 16px; margin-top: 10px; margin-bottom: 12px;
+        align-items: stretch;
       }
-      /* 大图舞台尺寸大幅提升 */
-      .spec-color-big-stage { 
-        width: 100%; height: 220px; display: flex; align-items: center; 
+      /* 3:4 黄金竖版比例舞台，确保手机能够修长显示 */
+      .spec-v-stage-box { 
+        width: 160px; height: 210px; display: flex; align-items: center; 
         justify-content: center; background: #fff; border: 1px solid #e8e8e8; 
-        border-radius: 4px; padding: 10px; overflow: hidden;
+        border-radius: 4px; padding: 12px; overflow: hidden; flex-shrink: 0;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.01);
       }
-      .spec-color-big-stage img { max-width: 100%; max-height: 100%; object-fit: contain; transition: opacity 0.15s ease; }
+      .spec-v-stage-box img { max-width: 100%; max-height: 100%; object-fit: contain; transition: opacity 0.15s ease; }
       
-      /* 选项网格 */
-      .spec-color-tabs-grid { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; }
-      .spec-color-btn-item { 
-        display: flex; align-items: center; gap: 8px; padding: 8px 12px; 
+      /* 按钮纵向排列区 */
+      .spec-v-tabs-box { display: flex; flex-direction: column; gap: 8px; flex-grow: 1; justify-content: center; }
+      .spec-v-color-btn { 
+        display: flex; align-items: center; gap: 10px; padding: 10px 14px; 
         border: 1px solid #dcdcdc; border-radius: 4px; cursor: pointer; 
-        transition: all 0.15s ease; background: #fff; flex: 1 1 calc(25% - 6px); 
-        justify-content: center;
+        transition: all 0.15s ease; background: #fff; width: 100%;
       }
-      .spec-color-btn-item:hover { border-color: #999; }
-      .spec-color-btn-item.active { border-color: #111; background: #fff; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+      .spec-v-color-btn:hover { border-color: #999; background: #fcfcfc; }
+      .spec-v-color-btn.active { border-color: #111; background: #fff; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
       .spec-color-lens { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
-      .spec-color-text { font-size: 12px; color: #333; }
+      .spec-color-text { font-size: 12px; color: #222; }
       
       /* 参数表格行 */
       .spec-group-title { font-weight: bold; font-size: 13px; color: #222; border-bottom: 2px solid #333; padding: 16px 0 6px 0; margin-top: 8px; }
@@ -213,7 +207,7 @@
       .spec-key { color: #666; font-size: 12px; min-width: 90px; flex-shrink: 0; text-align: left; }
       .spec-val { color: #222; font-size: 12px; text-align: right; word-break: break-word; }
 
-      /* 📱 手机端自适应 */
+      /* 📱 手机端智能转换：防止竖向卡片太拥挤 */
       @media (max-width: 767px) {
         .spec-main-body { display: block; }
         .spec-panel-left { display: block; width: 100%; border-right: none; border-bottom: 1px solid #eee; padding: 20px 16px; }
@@ -222,8 +216,10 @@
         .spec-key { min-width: 100%; color: #888; font-size: 11px; }
         .spec-val { text-align: left; padding-left: 2px; }
         
-        .spec-color-big-stage { height: 180px; } /* 移动端高度略微缩放以适配屏幕 */
-        .spec-color-btn-item { flex: 1 1 calc(50% - 4px); } /* 手机上两两一排 */
+        /* 手机端变为上下结构，上方是修长居中的竖版大图，下方是纵向平铺的按钮 */
+        .spec-vertical-color-layout { flex-direction: column; align-items: center; gap: 14px; }
+        .spec-v-stage-box { width: 150px; height: 200px; } 
+        .spec-v-tabs-box { width: 100%; }
       }
     </style>
     
@@ -240,35 +236,38 @@
       <div class="spec-panel-right">
         
       <div class="spec-group-title">机身颜色</div>
-      <div class="spec-color-large-card">
-        <div class="spec-color-big-stage">
-          <img class="spec-color-target-img" src="/images/z5c_black.jpg" alt="color global view">
+      <div class="spec-vertical-color-layout">
+        
+        <div class="spec-v-stage-box">
+          <img class="spec-color-target-img" src="/images/z5c_black.jpg" alt="color preview">
         </div>
-        <div class="spec-color-tabs-grid">
+        
+        <div class="spec-v-tabs-box">
+          <div style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; font-weight: bold;">SELECT COLOR</div>
     
-        <div class="spec-color-btn-item active" onclick="switchRightColor(this, '/images/z5c_black.jpg')">
+        <div class="spec-v-color-btn active" onclick="switchRightColor(this, '/images/z5c_black.jpg')">
           <span class="spec-color-lens" style="background-color: #2c302e;"></span>
           <span class="spec-color-text">石墨黑</span>
         </div>
       
-        <div class="spec-color-btn-item " onclick="switchRightColor(this, '/images/z5c_white.jpg')">
+        <div class="spec-v-color-btn " onclick="switchRightColor(this, '/images/z5c_white.jpg')">
           <span class="spec-color-lens" style="background-color: #f5f5f5;"></span>
           <span class="spec-color-text">陶瓷白</span>
         </div>
       
-        <div class="spec-color-btn-item " onclick="switchRightColor(this, '/images/z5c_red.jpg')">
+        <div class="spec-v-color-btn " onclick="switchRightColor(this, '/images/z5c_coral.jpg')">
           <span class="spec-color-lens" style="background-color: #da5a4a;"></span>
           <span class="spec-color-text">珊瑚红</span>
         </div>
       
-        <div class="spec-color-btn-item " onclick="switchRightColor(this, '/images/z5c_yellow.jpg')">
+        <div class="spec-v-color-btn " onclick="switchRightColor(this, '/images/z5c_yellow.jpg')">
           <span class="spec-color-lens" style="background-color: #e3d25b;"></span>
           <span class="spec-color-text">柠檬黄</span>
         </div>
       
         </div>
       </div>
-    <div class="spec-group-title">核心配置</div>
+    <div class="spec-group-title">基础信息</div>
         <div class="spec-row">
           <div class="spec-key">传播名</div>
           <div class="spec-val">Sony Xperia Z5 Compact</div>
@@ -360,10 +359,10 @@
     <script>
       function switchRightColor(element, imgPath) {
         const container = element.parentElement;
-        container.querySelectorAll('.spec-color-btn-item').forEach(el => el.classList.remove('active'));
+        container.querySelectorAll('.spec-v-color-btn').forEach(el => el.classList.remove('active'));
         element.classList.add('active');
         
-        const cardBox = element.closest('.spec-color-large-card');
+        const cardBox = element.closest('.spec-vertical-color-layout');
         const img = cardBox.querySelector('.spec-color-target-img');
         img.style.opacity = 0;
         setTimeout(() => {
