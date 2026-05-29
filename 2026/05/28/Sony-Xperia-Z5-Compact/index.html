@@ -153,62 +153,71 @@
 </div>
     <div class="post-content">
     
-  <div class="spec-card-wrapper">
+  <div class="spec-card-wrapper" id="spec-21501">
     <style>
       .spec-card-wrapper {
-        border: 1px solid #e5e5e5;
-        border-radius: 8px;
-        background: #ffffff;
-        margin: 24px 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        overflow: hidden;
-        box-sizing: border-box;
+        border: 1px solid #e5e5e5; border-radius: 8px; background: #ffffff; margin: 24px 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04); overflow: hidden; box-sizing: border-box;
       }
       .spec-card-wrapper * { box-sizing: border-box; }
       .spec-main-body { display: table; width: 100%; table-layout: fixed; }
       
-      /* 电脑端左右布局 */
-      .spec-panel-left { display: table-cell; width: 28%; background: #fafafa; border-right: 1px solid #eee; vertical-align: top; padding: 24px 16px; text-align: center; }
-      .spec-panel-right { display: table-cell; width: 72%; padding: 20px 24px; vertical-align: top; }
+      /* 布局 */
+      .spec-panel-left { display: table-cell; width: 30%; background: #fafafa; border-right: 1px solid #eee; vertical-align: top; padding: 24px 16px; text-align: center; }
+      .spec-panel-right { display: table-cell; width: 70%; padding: 4px 24px 24px 24px; vertical-align: top; }
       
-      .spec-img-box { width: 100%; margin-bottom: 16px; text-align: center; }
-      .spec-img-box img { max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 4px; display: inline-block; }
-      .spec-main-title { margin: 0 0 12px 0; font-size: 16px; color: #111; font-weight: 600; line-height: 1.4; }
+      /* 图片与标题 */
+      .spec-img-box { width: 100%; min-height: 160px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; }
+      .spec-img-box img { max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 4px; transition: opacity 0.2s ease; }
+      .spec-main-title { margin: 0 0 12px 0; font-size: 16px; color: #111; font-weight: 600; }
       
+      /* 标签 */
       .spec-tags-container { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
-      .spec-tag { background: #f3f3f3; color: #555; padding: 2px 6px; font-size: 11px; border-radius: 4px; border: 1px solid #e8e8e8; white-space: nowrap; }
+      .spec-tag { background: #f3f3f3; color: #555; padding: 2px 6px; font-size: 11px; border-radius: 4px; border: 1px solid #e8e8e8; }
       
-      .spec-group-title { font-weight: bold; font-size: 13px; color: #222; border-bottom: 2px solid #333; padding: 14px 0 6px 0; margin-top: 8px; }
+      /* 右侧新增：颜色卡片列表布局 */
+      .spec-color-row-layout { display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 0; }
+      .spec-color-item { 
+        display: flex; align-items: center; gap: 8px; padding: 6px 12px; 
+        border: 1px solid #e0e0e0; border-radius: 6px; cursor: pointer; 
+        transition: all 0.2s ease; background: #fff;
+      }
+      .spec-color-item:hover { border-color: #999; }
+      .spec-color-item.active { border-color: #111; background: #f9f9f9; font-weight: bold; }
+      .spec-color-lens { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
+      .spec-color-text { font-size: 12px; color: #333; }
       
-      /* 表格行样式：电脑端单行两列 */
+      /* 参数表格 */
+      .spec-group-title { font-weight: bold; font-size: 13px; color: #222; border-bottom: 2px solid #333; padding: 16px 0 6px 0; margin-top: 8px; }
       .spec-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px dashed #efefef; gap: 12px; }
-      .spec-key { color: #666; font-size: 12px; min-width: 80px; flex-shrink: 0; text-align: left; }
-      .spec-val { color: #222; font-size: 12px; text-align: right; word-break: break-word; overflow-wrap: break-word; }
+      .spec-key { color: #666; font-size: 12px; min-width: 90px; flex-shrink: 0; text-align: left; }
+      .spec-val { color: #222; font-size: 12px; text-align: right; word-break: break-word; }
 
-      /* 📱 核心：移动端/手机端极端适配方案 */
+      /* 📱 手机端适配 */
       @media (max-width: 767px) {
         .spec-main-body { display: block; }
         .spec-panel-left { display: block; width: 100%; border-right: none; border-bottom: 1px solid #eee; padding: 20px 16px; }
         .spec-panel-right { display: block; width: 100%; padding: 16px 16px; }
-        
-        .spec-img-box img { max-height: 140px; }
-        .spec-main-title { font-size: 15px; margin-bottom: 8px; }
-        
-        /* 手机端由于屏幕窄，将左右并排改为上下并排，彻底解决数据被截断显示不全的问题 */
-        .spec-row { flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 4px; padding: 8px 0; }
-        .spec-key { min-width: 100%; color: #888; font-size: 11px; text-align: left; }
-        .spec-val { text-align: left; font-size: 12px; color: #111; padding-left: 2px; }
+        .spec-row { flex-direction: column; gap: 4px; }
+        .spec-key { min-width: 100%; color: #888; font-size: 11px; }
+        .spec-val { text-align: left; padding-left: 2px; }
+        .spec-color-row-layout { gap: 8px; }
+        .spec-color-item { flex: 1 1 calc(50% - 4px); justify-content: center; } /* 手机上两两平分 */
       }
     </style>
+    
     <div class="spec-main-body">
       <div class="spec-panel-left">
-        <div class="spec-img-box"><img src="/images/z5c.jpg" alt="Xperia Z5 Compact"></div>
+        <div class="spec-img-box">
+          <img class="spec-target-img" src="/images/z5c.jpg" alt="Xperia Z5 Compact">
+        </div>
         <h3 class="spec-main-title">Xperia Z5 Compact</h3>
         <div class="spec-tags-container">
           <span class="spec-tag">E5803</span><span class="spec-tag">E5823</span><span class="spec-tag">SO-02H</span><span class="spec-tag">Suzuran</span>
         </div>
       </div>
+      
       <div class="spec-panel-right">
         <div class="spec-group-title">核心配置</div>
         <div class="spec-row">
@@ -293,6 +302,24 @@
       
       </div>
     </div>
+
+    <script>
+      function switchSpecColor(element, imgPath) {
+        // 1. 切换右侧颜色选项卡片的激活状态
+        const container = element.parentElement;
+        container.querySelectorAll('.spec-color-item').forEach(el => el.classList.remove('active'));
+        element.classList.add('active');
+        
+        // 2. 联动改变左侧固定位置的缩略图
+        const card = element.closest('.spec-card-wrapper');
+        const img = card.querySelector('.spec-target-img');
+        img.style.opacity = 0;
+        setTimeout(() => {
+          img.src = imgPath;
+          img.style.opacity = 1;
+        }, 150);
+      }
+    </script>
   </div>
   
 </div> 
