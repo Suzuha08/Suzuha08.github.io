@@ -86,8 +86,8 @@
                    
           
             
-              <li class="menu-item">
-                <a href="/source/gallery/">Gallery</a>
+              <li class="menu-item menu-item-active">
+                <a href="/gallery/">Gallery</a>
               </li> 
                    
           
@@ -100,30 +100,152 @@
 
       <div class="main">
         <div class="flex-container">
-          <article id="post">
-
+          <div class="gallery-waterfall-wrapper">
   
-    <div class="post-head">
-    <div class="post-info">
-        <div class="post-title">
-            
-            
-                Gallery
-            
-            
-        </div>
-    </div>
-    <div class="h-line-primary"></div>
-</div>
-    <div class="post-content">
     
-</div> 
+    
+      
+        
+      
+    
 
-<script>
-    window.onload = detectors();
-</script>
+    
+      <a href="/2026/06/03/Z5-Compact/" class="gallery-card-item">
+        <div class="gallery-img-box">
+          <img src="/images/z5c_cover.jpg" alt="Sony Xperia Z5 Compact" loading="lazy">
+        </div>
+        <div class="gallery-info-box">
+          <h4 class="gallery-card-title">Sony Xperia Z5 Compact</h4>
+          <span class="gallery-card-date">2026-06-03</span>
+        </div>
+      </a>
+    
   
-</article>
+    
+    
+      
+        
+      
+    
+
+    
+      <a href="/2026/06/03/Z4-Compact/" class="gallery-card-item">
+        <div class="gallery-img-box">
+          <img src="/images/a4_cover.jpg" alt="Sony Xperia A4 (Z4 Compact)" loading="lazy">
+        </div>
+        <div class="gallery-info-box">
+          <h4 class="gallery-card-title">Sony Xperia A4 (Z4 Compact)</h4>
+          <span class="gallery-card-date">2026-06-03</span>
+        </div>
+      </a>
+    
+  
+    
+    
+      
+        
+      
+    
+
+    
+      <a href="/2026/06/03/Z3-Compact/" class="gallery-card-item">
+        <div class="gallery-img-box">
+          <img src="/images/z3c_cover.jpg" alt="Sony Xperia Z3 Compact" loading="lazy">
+        </div>
+        <div class="gallery-info-box">
+          <h4 class="gallery-card-title">Sony Xperia Z3 Compact</h4>
+          <span class="gallery-card-date">2026-06-03</span>
+        </div>
+      </a>
+    
+  
+    
+    
+      
+        
+      
+    
+
+    
+      <a href="/2026/06/02/Z2-Compact/" class="gallery-card-item">
+        <div class="gallery-img-box">
+          <img src="/images/j1c_cover.jpg" alt="Sony Xperia J1 Compact (Z2 Compact)" loading="lazy">
+        </div>
+        <div class="gallery-info-box">
+          <h4 class="gallery-card-title">Sony Xperia J1 Compact (Z2 Compact)</h4>
+          <span class="gallery-card-date">2026-06-02</span>
+        </div>
+      </a>
+    
+  
+    
+    
+      
+        
+      
+    
+
+    
+      <a href="/2026/05/29/Z1-Compact/" class="gallery-card-item">
+        <div class="gallery-img-box">
+          <img src="/images/z1c_cover.jpg" alt="Sony Xperia Z1 Compact" loading="lazy">
+        </div>
+        <div class="gallery-info-box">
+          <h4 class="gallery-card-title">Sony Xperia Z1 Compact</h4>
+          <span class="gallery-card-date">2026-05-29</span>
+        </div>
+      </a>
+    
+  
+</div>
+
+<style>
+  /* 🌪️ 纯 CSS 瀑布流布局 */
+  .gallery-waterfall-wrapper { 
+    column-count: 3; 
+    column-gap: 16px; 
+    width: 100%; 
+    margin: 20px auto; 
+  }
+  .gallery-card-item { 
+    display: block; 
+    break-inside: avoid; 
+    margin-bottom: 16px; 
+    background: #ffffff; 
+    border: 1px solid #e8e8e8; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    text-decoration: none !important; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02); 
+    transition: all 0.25s ease; 
+  }
+  .gallery-card-item:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06); 
+    border-color: #999; 
+  }
+  .gallery-img-box { 
+    width: 100%; 
+    background: #fafafa; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-bottom: 1px solid #f0f0f0; 
+  }
+  .gallery-img-box img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+  }
+  .gallery-info-box { padding: 12px 14px; }
+  .gallery-card-title { margin: 0 0 6px 0 !important; font-size: 13px !important; font-weight: 600; color: #222; line-height: 1.4; }
+  .gallery-card-date { font-size: 11px; color: #999; }
+  @media (max-width: 767px) { 
+    .gallery-waterfall-wrapper { column-count: 2; column-gap: 12px; } 
+    .gallery-card-item { margin-bottom: 12px; } 
+    .gallery-card-title { font-size: 12px !important; } 
+  }
+</style>
         </div>
       </div>
       
